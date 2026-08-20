@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50" fill="none">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3F51B5" />
+      <stop offset="60%" stop-color="#5C6BC0" />
+      <stop offset="100%" stop-color="#283593" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF2FF" />
+      <stop offset="100%" stop-color="#5C6BC0" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#3F51B5" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Icon Emblem -->
+  <g transform="translate(6, 6)">
+    <!-- Rounded Shield / Base -->
+    <rect x="0" y="0" width="38" height="38" rx="11" fill="url(#logoGrad)" filter="url(#glow)"/>
+    
+    <!-- Academic Cap / Bookmark Symbol -->
+    <path d="M19 10 L30 15.5 L19 21 L8 15.5 Z" fill="#FFFFFF" opacity="0.95"/>
+    <path d="M13 18.5 L13 24.5 C13 26.5 19 28.5 19 28.5 C19 28.5 25 26.5 25 24.5 L25 18.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+    
+    <!-- Smart Notification Dot -->
+    <circle cx="28.5" cy="11.5" r="3.5" fill="#22C55E" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Brand Typography -->
+  <g transform="translate(54, 32)">
+    <text font-family="system-ui, -apple-system, 'Inter', 'Roboto', sans-serif" font-weight="700" font-size="24" fill="#1E293B" letter-spacing="-0.5">
+      Recorda<tspan fill="#3F51B5">U</tspan>
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>¡Correo verificado! | RecordaU</title>
+  <meta name="description" content="Tu cuenta de RecordaU ha sido verificada con éxito. Ya puedes volver a la aplicación móvil.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg">
+  
+  <!-- Fonts: Inter & Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <!-- Ambient Decorative Background -->
+  <div class="bg-ambient-layer" aria-hidden="true">
+    <div class="ambient-circle-1"></div>
+    <div class="ambient-circle-2"></div>
+    <div class="ambient-circle-3"></div>
+  </div>
+
+  <div class="auth-page-wrapper">
+    <!-- Top Navigation / Logo & Language Selector -->
+    <header style="width: 100%; max-width: 480px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <a href="../index.html" aria-label="Volver al inicio de RecordaU">
+        <img src="../assets/logo/recordau-logo.svg" alt="RecordaU" width="140" height="35">
+      </a>
+      <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <!-- Confirmation Card -->
+    <main class="auth-card-box">
+      <!-- Success Animated Icon -->
+      <div class="auth-success-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="auth-title" data-i18n="auth_title">¡Correo verificado!</h1>
+      
+      <p class="auth-desc" data-i18n="auth_desc">
+        Tu cuenta de RecordaU ha sido verificada correctamente. Ya puedes volver a la aplicación móvil e iniciar sesión con tu cuenta.
+      </p>
+
+      <div class="auth-actions">
+        <!-- Deep link button prepared for RecordaU mobile app -->
+        <a href="recordau://auth-callback" class="btn btn-primary" id="btn-open-app" data-i18n="auth_btn_open">
+          Abrir RecordaU
+        </a>
+
+        <!-- Fallback Return to Web Homepage -->
+        <a href="../index.html" class="btn btn-secondary" data-i18n="auth_btn_home">
+          Ir al sitio web oficial
+        </a>
+      </div>
+
+      <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 8px;" data-i18n="auth_note">
+        Si la aplicación no se abre automáticamente, ábrela manualmente desde tu teléfono.
+      </small>
+    </main>
+
+    <!-- Footer note -->
+    <footer style="margin-top: 32px; font-size: 0.82rem; color: var(--text-muted);">
+      © 2026 RecordaU · Recordatorio Universidad
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/translations.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // Deep-link trigger helper for mobile web browser
+    document.getElementById('btn-open-app')?.addEventListener('click', (e) => {
+      // In local testing without the mobile deep link registered, notify the user gracefully
+      setTimeout(() => {
+        const lang = localStorage.getItem('recordau_lang') || 'es';
+        const msg = lang === 'es'
+          ? 'Si la app no se abre de inmediato, puedes abrir RecordaU desde tu pantalla de inicio.'
+          : 'If the app does not open immediately, you can open RecordaU from your home screen.';
+        showToast(msg);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
