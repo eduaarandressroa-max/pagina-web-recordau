@@ -226,7 +226,22 @@ const translations = {
     auth_desc: "Tu cuenta de RecordaU ha sido verificada correctamente. Ya puedes volver a la aplicación móvil e iniciar sesión con tu cuenta.",
     auth_btn_open: "Abrir RecordaU",
     auth_btn_home: "Ir al sitio web oficial",
-    auth_note: "Si la aplicación no se abre automáticamente, ábrela manualmente desde tu teléfono."
+    auth_note: "Si la aplicación no se abre automáticamente, ábrela manualmente desde tu teléfono.",
+
+    // Reset Password Page
+    reset_verifying: "Verificando enlace de recuperación...",
+    reset_title: "Restablecer contraseña",
+    reset_desc: "Introduce tu nueva contraseña para actualizar tu cuenta.",
+    reset_pass_label: "Nueva contraseña",
+    reset_pass_ph: "Mínimo 8 caracteres",
+    reset_pass_hint: "Debe tener al menos 8 caracteres",
+    reset_confirm_label: "Confirmar nueva contraseña",
+    reset_confirm_ph: "Repite tu contraseña",
+    reset_submit_btn: "CAMBIAR CONTRASEÑA",
+    reset_success_title: "¡Contraseña cambiada!",
+    reset_success_desc: "Tu contraseña se cambió correctamente.",
+    reset_error_title: "Enlace no válido o expirado",
+    reset_error_desc: "El enlace de recuperación no es válido o ya ha expirado. Por favor, solicita uno nuevo desde la aplicación RecordaU."
   },
 
   en: {
@@ -452,6 +467,21 @@ const translations = {
     auth_desc: "Your RecordaU account has been successfully verified. You can now return to the mobile application and sign in.",
     auth_btn_open: "Open RecordaU",
     auth_btn_home: "Go to official website",
-    auth_note: "If the application does not open automatically, please open it manually from your phone."
+    auth_note: "If the application does not open automatically, please open it manually from your phone.",
+
+    // Reset Password Page
+    reset_verifying: "Verifying recovery link...",
+    reset_title: "Reset Password",
+    reset_desc: "Enter your new password to update your account.",
+    reset_pass_label: "New password",
+    reset_pass_ph: "At least 8 characters",
+    reset_pass_hint: "Must be at least 8 characters",
+    reset_confirm_label: "Confirm new password",
+    reset_confirm_ph: "Repeat your password",
+    reset_submit_btn: "CHANGE PASSWORD",
+    reset_success_title: "Password Changed!",
+    reset_success_desc: "Your password has been changed successfully.",
+    reset_error_title: "Invalid or Expired Link",
+    reset_error_desc: "The recovery link is invalid or has expired. Please request a new one from the RecordaU application."
   }
 };
