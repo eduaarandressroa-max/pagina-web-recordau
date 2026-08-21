@@ -1,0 +1,12 @@
+﻿[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.recordatoriouniversidad_nuevo",
+      "sha256_cert_fingerprints": [
+        "4D:CB:A3:ED:6F:47:98:17:0A:F1:B8:6C:2D:14:92:C5:2E:6E:D8:BB:A8:41:88:EF:BF:2B:CA:1B:18:5B:F8:90"
+      ]
+    }
+  }
+]

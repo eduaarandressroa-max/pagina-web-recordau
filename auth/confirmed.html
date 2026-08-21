@@ -57,20 +57,11 @@
       </p>
 
       <div class="auth-actions">
-        <!-- Deep link button prepared for RecordaU mobile app -->
-        <a href="recordau://auth-callback" class="btn btn-primary" id="btn-open-app" data-i18n="auth_btn_open">
-          Abrir RecordaU
-        </a>
-
-        <!-- Fallback Return to Web Homepage -->
-        <a href="../index.html" class="btn btn-secondary" data-i18n="auth_btn_home">
+        <!-- Return to Web Homepage -->
+        <a href="../index.html" class="btn btn-primary" data-i18n="auth_btn_home">
           Ir al sitio web oficial
         </a>
       </div>
-
-      <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 8px;" data-i18n="auth_note">
-        Si la aplicación no se abre automáticamente, ábrela manualmente desde tu teléfono.
-      </small>
     </main>
 
     <!-- Footer note -->
@@ -82,18 +73,5 @@
   <!-- Scripts -->
   <script src="../js/translations.js"></script>
   <script src="../js/main.js"></script>
-  <script>
-    // Deep-link trigger helper for mobile web browser
-    document.getElementById('btn-open-app')?.addEventListener('click', (e) => {
-      // In local testing without the mobile deep link registered, notify the user gracefully
-      setTimeout(() => {
-        const lang = localStorage.getItem('recordau_lang') || 'es';
-        const msg = lang === 'es'
-          ? 'Si la app no se abre de inmediato, puedes abrir RecordaU desde tu pantalla de inicio.'
-          : 'If the app does not open immediately, you can open RecordaU from your home screen.';
-        showToast(msg);
-      }, 1000);
-    });
-  </script>
 </body>
 </html>
